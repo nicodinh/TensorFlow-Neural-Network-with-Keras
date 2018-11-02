@@ -7,3 +7,24 @@
 - [Keras](https://keras.io/#installation) using [Tensorflow](https://www.tensorflow.org/install/) for the back end
 - [h5py](http://docs.h5py.org/en/latest/build.html)
 - [Docker CE](https://docs.docker.com/install/)
+
+```bash
+conda create --name my-env
+conda activate my-env
+conda install tensorflow
+conda install keras
+mkdir ~/.keras
+```
+open .keras/keras.json
+```json
+{
+    "image_data_format": "channels_last",
+    "epsilon": 1e-07,
+    "floatx": "float32",
+    "backend": "tensorflow"
+}
+```
+```bash
+python3 create-neural-network.py
+>>> Using TensorFlow backend.
+```
